@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My CheatSheet</title>
+        <link href="styles.css" type="text/css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <h1>My HTML/CSS Cheatsheet</h1>
+            <nav>
+                <ul>
+                    <li><a href="#html-table">HTML</a></li>
+                    <li><a href="#css-table">CSS</a></li>
+                    <li><a href="#relative-paths-table">Relative Paths</a></li>
+                </ul>
+            </nav>
+        </header>
+           
+        <main>
+            
+            <!-- HTML Table -->
+            <section class='table-section'>
+                <h2 id="html-table">HTML table</h2>
+                <table>
+
+                    <thead class='table-header'>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Name</th>
+                            <th>Definition & Usage</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr class='table-row first-row'>
+                            <td class='tag'><span class='code'>&lt;header&gt;</span></td>
+                            <td class='td-name'>Header</td>
+                            <td>represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>&lt;nav&gt;</span></td>
+                            <td class='td-name'>Nav</td>
+                            <td>defines a set of navigation links. Notice that NOT all links of a document should be inside a &lt;nav&gt; element. This element is intended only for major block of navigation links.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>&lt;main&gt;</span></td>
+                            <td class='td-name'>Main</td>
+                            <td>specifies the main content of a document.The content inside it should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms. Use one per document.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>&lt;section&gt;</span></td>
+                            <td class='td-name'>Section</td>
+                            <td>represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>&lt;div&gt;</span></td>
+                            <td class='td-name'>Div</td>
+                            <td>is the generic container for flow content. It has no effect on the content or layout until styled in some way using CSS (e.g. styling is directly applied to it, or some kind of layout model like Flexbox is applied to its parent element).</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>&lt;aside&gt;</span></td>
+                            <td class='td-name'>Aside</td>
+                            <td>represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>&lt;footer&gt;</span></td>
+                            <td class='td-name'>Footer</td>
+                            <td>represents a footer for its nearest sectioning content or sectioning root element. A &lt;footer&gt; typically contains information about the author of the section, copyright data or links to related documents.</td>
+                        </tr>
+
+                        
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- CSS -->
+            <section class='table-section inline-css-paths' id='css-table-section'>
+                <h2 id='css-table'>CSS Selectors</h2>
+                <table>
+
+                    <thead class='table-header'>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definition & Usage</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr class='table-row first-row'>
+                            <td class='tag'><span class='code'>*</span></td>
+                            <td>all elements</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div</span></td>
+                            <td>all div tags</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div,p</span></td>
+                            <td>all divs and paragraphs</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div p</span></td>
+                            <td>paragraphs inside divs</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div > p</span></td>
+                            <td>all p tags, one level deep in div</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div + p</span></td>
+                            <td>p tags immediately after div</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div ~ p</span></td>
+                            <td>p tags preceded by div</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>.classname</span></td>
+                            <td>all elements with class</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>#idname</span></td>
+                            <td>element with ID</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div.classname</span></td>
+                            <td>divs with certain classname</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>div#idname</span></td>
+                            <td>div with certain ID</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>#idname*</span></td>
+                            <td>all elements inside #idname</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+            </section>
+
+            <!-- Relative Paths -->
+            <section class='table-section inline-css-paths' id='relative-paths-section'>
+                <h2 id='relative-paths-table'>Relative paths</h2>
+                <table>
+
+                    <thead class='table-header'>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definition & Usage</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr class='table-row first-row'>
+                            <td class='tag'><span class='code'>picture.jpg;</span></td>
+                            <td>The "picture.jpg" file is located in the same folder as the current page.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>images/picture.jpg;</span></td>
+                            <td>The "picture.jpg" file is located in the images folder in the current folder.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>/images/picture.jpg</span></td>
+                            <td>The "picture.jpg" file is located in the images folder at the root of the current web.</td>
+                        </tr>
+
+                        <tr class='table-row'>
+                            <td class='tag'><span class='code'>../picture.jpg</span></td>
+                            <td>The "picture.jpg" file is located in the folder one level up from the current folder.</td>
+                        </tr>
+                 
+                    </tbody>
+                </table>
+
+            </section>
+                    
+        </main>
+
+        <footer>
+            
+        </footer>
+
+    </body>
+</html>
